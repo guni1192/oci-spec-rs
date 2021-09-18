@@ -275,7 +275,7 @@ impl ToString for LinuxDeviceCgroup {
     setter(into, strip_option),
     build_fn(error = "OciSpecError")
 )]
-#[getset(get_copy = "pub")]
+#[getset(get = "pub")]
 /// LinuxMemory for Linux cgroup 'memory' resource management.
 pub struct LinuxMemory {
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -381,10 +381,10 @@ pub struct LinuxCpu {
     setter(into, strip_option),
     build_fn(error = "OciSpecError")
 )]
-#[getset(get_copy = "pub")]
 /// LinuxPids for Linux cgroup 'pids' resource management (Linux 4.3).
 pub struct LinuxPids {
     #[serde(default)]
+    #[getset(get = "pub")]
     /// Maximum number of PIDs. Default is "no limit".
     limit: i64,
 }
