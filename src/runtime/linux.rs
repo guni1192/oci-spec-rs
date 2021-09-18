@@ -256,7 +256,17 @@ impl ToString for LinuxDeviceCgroup {
 }
 
 #[derive(
-    Builder, Clone, Copy, CopyGetters, Debug, Default, Deserialize, Eq, PartialEq, Serialize,
+    Builder,
+    Clone,
+    Copy,
+    CopyGetters,
+    Debug,
+    Default,
+    Deserialize,
+    Eq,
+    Getters,
+    PartialEq,
+    Serialize,
 )]
 #[serde(rename_all = "camelCase")]
 #[builder(
@@ -352,7 +362,19 @@ pub struct LinuxCpu {
     mems: Option<String>,
 }
 
-#[derive(Builder, Clone, Copy, Debug, Default, Deserialize, Eq, Getters, PartialEq, Serialize)]
+#[derive(
+    Builder,
+    Clone,
+    Copy,
+    CopyGetters,
+    Debug,
+    Default,
+    Deserialize,
+    Eq,
+    Getters,
+    PartialEq,
+    Serialize,
+)]
 #[builder(
     default,
     pattern = "owned",
